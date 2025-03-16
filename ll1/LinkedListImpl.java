@@ -7,7 +7,7 @@ public class LinkedListImpl implements LinkedListInterface{
 
     Node head = null;
 
-//    adding data to linked list at beggining
+//    adding data to linked list at beginning
     public void addNodeAtBeginning(){
 
        System.out.println("inter the data to add in list");
@@ -41,8 +41,6 @@ public class LinkedListImpl implements LinkedListInterface{
         }
 
         temp.next = newNode;
-
-
     }
 
 //    remove data from beginning
@@ -67,7 +65,6 @@ public class LinkedListImpl implements LinkedListInterface{
         while (temp.next.next!=null){
             temp = temp.next;
         }
-
         temp.next = null;
     }
 
@@ -92,14 +89,12 @@ public class LinkedListImpl implements LinkedListInterface{
         for(int count = 2; count<position && temp.next!=null; count++){
             temp = temp.next;
         }
-//
+
         if (temp.next==null){
             System.out.println("position is out of bound ");
             return;
         }
-
         temp.next = temp.next.next;
-
     }
 
 //    display the linked list
@@ -120,8 +115,5 @@ public class LinkedListImpl implements LinkedListInterface{
         }
         System.out.println();
     }
-
-
-
 
 }
